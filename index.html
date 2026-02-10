@@ -21,8 +21,9 @@
             <ul class="nav-links">
                 <li><a href="#about">About me</a></li>
                 <li><a href="#timeline">Timeline</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Skills</a></li>
                 <li><a href="#certs">Certifications</a></li>
+                <li><a href="#community">Community</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#" class="btn-export" id="exportCV">
@@ -47,11 +48,13 @@
                     <h1>Annelies Debroey</h1>
                     <p class="hero-subtitle">IT Professional · Mechelen, Belgium</p>
                     <p class="hero-description">
-                        IT Consultant with 8+ years of experience in ERP systems, business analysis, 
-                        and project management. Currently building technical development skills through 
-                        an intensive Java program at INTEC Brussels — bridging business and technology 
-                        with an eye for quality and detail. I am interested in roles such as testing engineer,
-                        quality assurance engineer and product owner for software applications.
+                        IT Consultant with 8+ years of experience in ERP systems, business analysis, and project management. 
+                        Currently building technical development skills through an intensive Java program at INTEC Brussels to 
+                        take on broader and more technical roles in IT projects. I have a natural eye for detail and a drive 
+                        for continuous improvement, with strong skills in connecting business requirements, technical solutions, 
+                        and user needs. I am focused on efficiency, quality, and creating the best user experiences. I am excited 
+                        to learn from experienced developers as I grow in this new direction and contribute my analytical mindset 
+                        to the team.
                     </p>
                     <div class="languages">
                         <span class="lang-pill">Dutch — Native</span>
@@ -76,7 +79,7 @@
             <span class="strength-icon">🔍</span>
             <h4>Detail-driven Improvement Mindset</h4>
         </div>
-        <p>I don’t just notice details — I refine and elevate them, turning precision into better outcomes.</p>
+        <p>I don't just notice details — I refine and elevate them, turning precision into better outcomes.</p>
     </div>
 
     <div class="strength-card">
@@ -305,7 +308,7 @@
             <h4>Primary School — Early Editor & Event Planner</h4>
             <p>
                 In primary school I loved creating things and bringing people together. I started a monthly 
-                school “newspaper” and organised classroom events, like birthday surprises for the teacher. 
+                school "newspaper" and organised classroom events, like birthday surprises for the teacher. 
                 Looking back, it was my first taste of communication, ownership, and making ideas happen.
             </p>
         </div>
@@ -313,7 +316,7 @@
         <div class="htl-info" id="info-birth">
             <h4>Born 🎂</h4>
             <p>
-                Born on June 16, 1988. A good day to start asking “why?” a lot and to develop the curiosity 
+                Born on June 16, 1988. A good day to start asking "why?" a lot and to develop the curiosity 
                 that still drives me today. I was lucky to grow up in a supportive environment.
             </p>
         </div>
@@ -321,318 +324,197 @@
     </div>
 </section>
 
-        <!-- ════════ PROJECTS — accordion with grouped tags & filters ════════ -->
+        <!-- ════════ SKILLS & EXPERIENCE ════════ -->
 <section id="projects">
     <div class="section-header reveal">
-        <h2>Projects</h2>
-        <p class="section-sub">What I've built, tested, and improved.</p>
+        <h2>Tech Skills</h2>
     </div>
 
-    <!-- Skill group filters -->
-    <div class="project-filters reveal">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="testing">Testing & QA</button>
-        <button class="filter-btn" data-filter="backend">Backend / Java</button>
-        <button class="filter-btn" data-filter="web">Web & Frontend</button>
-        <button class="filter-btn" data-filter="mobile">Mobile</button>
-        <button class="filter-btn" data-filter="pm">Project management</button>
-        <button class="filter-btn" data-filter="content">Content & UX</button>
-        <button class="filter-btn" data-filter="finance">Finance domain</button>
+    <!-- Skill pills by category -->
+    <div class="skills-overview reveal">
+        <div class="skill-row">
+            <span class="skill-label">Testing &amp; QA</span>
+            <div class="skill-pills">
+                <span class="pill pill-testing">BDD</span>
+                <span class="pill pill-testing">Cucumber</span>
+                <span class="pill pill-testing">Gherkin</span>
+                <span class="pill pill-testing">JUnit</span>
+                <span class="pill pill-testing">Postman</span>
+            </div>
+        </div>
+        <div class="skill-row">
+            <span class="skill-label">Backend</span>
+            <div class="skill-pills">
+                <span class="pill pill-backend">Java</span>
+                <span class="pill pill-backend">Spring Boot</span>
+                <span class="pill pill-backend">REST APIs</span>
+                <span class="pill pill-backend">SQL</span>
+                <span class="pill pill-backend">Hibernate / JPA</span>
+            </div>
+        </div>
+        <div class="skill-row">
+            <span class="skill-label">Frontend</span>
+            <div class="skill-pills">
+                <span class="pill pill-frontend">HTML</span>
+                <span class="pill pill-frontend">CSS</span>
+                <span class="pill pill-frontend">JavaScript</span>
+                <span class="pill pill-frontend">Angular</span>
+                <span class="pill pill-frontend">Bootstrap</span>
+            </div>
+        </div>
+        <div class="skill-row">
+            <span class="skill-label">Tools &amp; Workflow</span>
+            <div class="skill-pills">
+                <span class="pill pill-tools">Git</span>
+                <span class="pill pill-tools">Maven</span>
+                <span class="pill pill-tools">Docker</span>
+                <span class="pill pill-tools">Jira</span>
+                <span class="pill pill-tools">Scrum</span>
+            </div>
+        </div>
+        <div class="skill-row">
+            <span class="skill-label">Analysis</span>
+            <div class="skill-pills">
+                <span class="pill pill-analysis">UML</span>
+                <span class="pill pill-analysis">BPMN</span>
+                <span class="pill pill-analysis">Requirements</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Where I applied this -->
+    <div class="section-header reveal" style="margin-top: 2.5rem;">
+        <h3 class="subsection-title">Where I've applied this</h3>
     </div>
 
     <div class="accordion reveal">
 
-        <!-- FOD — Test Automation & VAT engine + POC -->
-        <div class="acc-item" data-groups="testing backend pm finance">
+        <div class="acc-item">
             <button class="acc-header">
                 <div class="acc-left">
-                    <h3>FOD Financiën — Test Automation & VAT Engine POC</h3>
-                    <div class="project-tags">
-                        <span class="tag tag-skill-testing">BDD</span>
-                        <span class="tag tag-skill-testing">Cucumber</span>
-                        <span class="tag tag-skill-testing">Gherkin</span>
-                        <span class="tag tag-skill-testing">API validation</span>
-                        <span class="tag tag-skill-backend">Java</span>
-                        <span class="tag tag-skill-pm">Scrum</span>
-                        <span class="tag tag-skill-pm">Jira</span>
-                    </div>
+                    <h3>FOD Financiën — Test Automation &amp; VAT Engine</h3>
+                    <span class="acc-period">2025 – 2026</span>
                 </div>
                 <span class="acc-icon"></span>
             </button>
-
             <div class="acc-panel">
                 <div class="acc-panel-inner">
-                    <p class="project-date"><strong>Nov 2025 – Apr 2026</strong></p>
-
-                    <h4>What I do</h4>
-                    <p>
-                        I work in the Automation team at FOD Financiën, where all services pass through for validation.
-                        I write BDD test scenarios in Gherkin, implement step definitions in Java with Cucumber, and
-                        validate backend services and API endpoints via Swagger. Our team is responsible for the VAT
-                        calculation engine for the entire organisation, and I am building a proof of concept for
-                        detecting version drift in API contracts. This is also my first full experience working inside
-                        a Scrum team, with daily stand‑ups, sprint planning, refinement and Jira ticketing.
-                    </p>
-
-                    <h4>Impact</h4>
-                    <p>
-                        Contributing to a mission‑critical VAT engine used by the whole organisation, improving test
-                        coverage and reliability. The API contract POC helps the team understand and manage change
-                        better over time, and my Scrum experience strengthens how I collaborate with developers and
-                        analysts.
-                    </p>
+                    <p>BDD test scenarios in Gherkin, step definitions in Java with Cucumber,
+                    API validation via Swagger. Building a POC for detecting version drift
+                    in API contracts. Working in a Scrum team with daily stand‑ups, sprint
+                    planning, and Jira.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Intec — Java & Backend projects (Zoo, Casino, Course API, etc.) -->
-        <div class="acc-item" data-groups="backend testing">
+        <div class="acc-item">
             <button class="acc-header">
                 <div class="acc-left">
-                    <h3>Java & Backend Projects — Intec Brussel</h3>
-                    <div class="project-tags">
-                        <span class="tag tag-skill-backend">Java</span>
-                        <span class="tag tag-skill-backend">Spring Boot</span>
-                        <span class="tag tag-skill-backend">REST API</span>
-                        <span class="tag tag-skill-db">SQL / MySQL</span>
-                        <span class="tag tag-skill-testing">Postman</span>
-                        <span class="tag tag-skill-tools">Git</span>
-                        <span class="tag tag-skill-tools">Maven</span>
-                    </div>
+                    <h3>Java &amp; Backend Projects — Intec Brussel</h3>
+                    <span class="acc-period">2025 – 2026</span>
                 </div>
                 <span class="acc-icon"></span>
             </button>
-
             <div class="acc-panel">
                 <div class="acc-panel-inner">
-                    <p class="project-date"><strong>2025 – 2026</strong></p>
-
-                    <h4>What I do</h4>
-                    <p>
-                        A series of Java and backend projects as part of the full‑stack enterprise development track:
-                        an object‑oriented “Zoo” application, a group project with casino games, and a course platform
-                        REST API. I work with Java, Spring Boot, REST endpoints, MySQL, and JPA/Hibernate, and use
-                        Postman to test APIs. Version control (Git/GitHub), Maven and IDEs like IntelliJ are part of
-                        the daily workflow.
-                    </p>
-
-                    <h4>Impact</h4>
-                    <p>
-                        These projects gave me a solid foundation in backend development, OOP design and API thinking.
-                        Working in group projects taught me how to structure code, collaborate around a shared codebase,
-                        and debug issues as a team.
-                    </p>
+                    <p>OOP applications, group projects, and a course platform REST API.
+                    Java, Spring Boot, MySQL, JPA/Hibernate, Postman, Git, and Maven.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Dog App — Graduation project (mobile, dogs, testing strategy) -->
-        <div class="acc-item" data-groups="mobile testing content">
+        <div class="acc-item">
             <button class="acc-header">
                 <div class="acc-left">
                     <h3>Dog App — Graduation Project</h3>
-                    <div class="project-tags">
-                        <span class="tag tag-skill-tools">Mobile app</span>
-                        <span class="tag tag-skill-testing">Testing strategy</span>
-                        <span class="tag tag-skill-content">Dog parents</span>
-                    </div>
+                    <span class="acc-period">In progress</span>
                 </div>
                 <span class="acc-icon"></span>
             </button>
-
             <div class="acc-panel">
                 <div class="acc-panel-inner">
-                    <p class="project-date"><strong>In progress</strong></p>
-
-                    <h4>What I do</h4>
-                    <p>
-                        Designing and building a mobile application for dog parents as my graduation project. The exact
-                        concept is still under wraps, but it includes defining features, user flows, and a testing
-                        strategy for new functionality. I involve potential users to validate assumptions and make
-                        sure the app solves real‑world problems.
-                    </p>
-
-                    <h4>Impact</h4>
-                    <p>
-                        This project connects my love for dogs with my technical path. It gives me experience in
-                        thinking end‑to‑end: from idea, to user needs, to features, to testing and eventually preparing
-                        for a public release in an app store.
-                    </p>
+                    <p>Designing a mobile app for dog parents: feature definition, user flows,
+                    testing strategy, and user validation.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Developer Portfolio & CV site (JS/HTML/CSS + hosting) -->
-        <div class="acc-item" data-groups="web backend content">
+        <div class="acc-item">
             <button class="acc-header">
                 <div class="acc-left">
-                    <h3>Developer Portfolio & CV Website</h3>
-                    <div class="project-tags">
-                        <span class="tag tag-skill-frontend">HTML</span>
-                        <span class="tag tag-skill-frontend">CSS</span>
-                        <span class="tag tag-skill-frontend">JavaScript</span>
-                        <span class="tag tag-skill-tools">Deploying & hosting</span>
-                    </div>
+                    <h3>Portfolio &amp; CV Website</h3>
+                    <span class="acc-period">Ongoing</span>
                 </div>
                 <span class="acc-icon"></span>
             </button>
-
             <div class="acc-panel">
                 <div class="acc-panel-inner">
-                    <p class="project-date"><strong>Ongoing</strong></p>
-
-                    <h4>What I do</h4>
-                    <p>
-                        I designed and built this portfolio and CV site in HTML, CSS and JavaScript. That includes layout,
-                        responsive behaviour, animations and content structure, plus publishing and hosting it so it’s
-                        discoverable and easy to share.
-                    </p>
-
-                    <h4>Impact</h4>
-                    <p>
-                        The site brings my story, projects and skills together in one place, and gave me hands‑on
-                        experience with front‑end basics, structuring information and iterating based on feedback.
-                    </p>
+                    <p>Built from scratch in HTML, CSS, and JavaScript. Responsive design,
+                    animations, and deployed via GitHub Pages.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Client web projects: Squarespace + Triple A Benelux -->
-        <div class="acc-item" data-groups="web content">
+        <div class="acc-item">
             <button class="acc-header">
                 <div class="acc-left">
-                    <h3>Client Websites & Content</h3>
-                    <div class="project-tags">
-                        <span class="tag tag-skill-frontend">Squarespace</span>
-                        <span class="tag tag-skill-frontend">Wix</span>
-                        <span class="tag tag-skill-content">Content writing</span>
-                        <span class="tag tag-skill-content">UX writing</span>
-                    </div>
+                    <h3>Client Websites &amp; Content</h3>
+                    <span class="acc-period">Ongoing</span>
                 </div>
                 <span class="acc-icon"></span>
             </button>
-
             <div class="acc-panel">
                 <div class="acc-panel-inner">
-                    <p class="project-date"><strong>Ongoing</strong></p>
-
-                    <h4>What I do</h4>
-                    <p>
-                        Built a Squarespace website for a friend’s service business (ossatservice.com) and create
-                        content for a Wix site for Triple A Benelux, writing profiles for dogs and updating website
-                        content. I focus on clarity, readability and how information is presented to visitors.
-                    </p>
-
-                    <h4>Impact</h4>
-                    <p>
-                        Combining light web design with content and UX thinking. These projects sharpen my ability to
-                        communicate clearly online, structure information, and tailor tone of voice to different
-                        audiences.
-                    </p>
+                    <p>Squarespace site for a service business, Wix content for Triple A Benelux.
+                    Focus on clarity, UX writing, and content structure.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Oracle Financials Cloud — Sinube -->
-        <div class="acc-item" data-groups="backend testing finance">
+        <div class="acc-item">
             <button class="acc-header">
                 <div class="acc-left">
-                    <h3>Oracle Financials Cloud — Learning & Regression Testing</h3>
-                    <div class="project-tags">
-                        <span class="tag tag-skill-backend">Oracle Financials Cloud</span>
-                        <span class="tag tag-skill-testing">Regression testing</span>
-                        <span class="tag tag-skill-finance">Finance domain</span>
-                    </div>
+                    <h3>Oracle Financials Cloud — SiNube</h3>
+                    <span class="acc-period">2023 – 2024</span>
                 </div>
                 <span class="acc-icon"></span>
             </button>
-
             <div class="acc-panel">
                 <div class="acc-panel-inner">
-                    <p class="project-date"><strong>Jul 2023 – Jun 2024</strong></p>
-
-                    <h4>What I do</h4>
-                    <p>
-                        I spent a year learning Oracle Financials Cloud, supporting the team with regression testing,
-                        configuration follow‑up and validation work across financial modules. During this time I also
-                        completed several Oracle‑related certifications.
-                    </p>
-
-                    <h4>Impact</h4>
-                    <p>
-                        This experience deepened my understanding of complex financial systems and made it clear how
-                        much I enjoy the technical side of working with software — a key trigger for my move towards
-                        development and test automation.
-                    </p>
+                    <p>Regression testing, configuration follow‑up, and validation across
+                    financial modules. Completed several Oracle certifications.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Adyen — Strategic client growth & data insights -->
-        <div class="acc-item" data-groups="finance content">
+        <div class="acc-item">
             <button class="acc-header">
                 <div class="acc-left">
-                    <h3>Strategic Client Growth & Data‑Driven Insights — Adyen</h3>
-                    <div class="project-tags">
-                        <span class="tag tag-skill-tools">Salesforce</span>
-                        <span class="tag tag-skill-tools">Looker</span>
-                        <span class="tag tag-skill-content">Data insights</span>
-                    </div>
+                    <h3>Strategic Client Growth — Adyen</h3>
+                    <span class="acc-period">2021 – 2023</span>
                 </div>
                 <span class="acc-icon"></span>
             </button>
-
             <div class="acc-panel">
                 <div class="acc-panel-inner">
-                    <p class="project-date"><strong>Apr 2021 – Mar 2023</strong></p>
-
-                    <h4>What I do</h4>
-                    <p>
-                        Managed strategic enterprise merchant portfolios, led C‑level business reviews and worked with
-                        technical and commercial teams to improve payment flows. I used Looker and Salesforce heavily
-                        to analyse data, margins and growth opportunities.
-                    </p>
-
-                    <h4>Impact</h4>
-                    <p>
-                        I became the go‑to person for data insights in my team and realised I felt most at home in
-                        technical and process‑focused conversations — which ultimately nudged me back towards software
-                        consultancy and, later, development.
-                    </p>
+                    <p>Data analysis with Looker and Salesforce, C‑level business reviews,
+                    payment flow optimisation for enterprise merchants.</p>
                 </div>
             </div>
         </div>
 
-        <!-- AFAS — ERP Process Integration -->
-        <div class="acc-item" data-groups="backend pm finance">
+        <div class="acc-item">
             <button class="acc-header">
                 <div class="acc-left">
-                    <h3>ERP Process Integration & Client Success — AFAS Software</h3>
-                    <div class="project-tags">
-                        <span class="tag tag-skill-backend">ERP</span>
-                        <span class="tag tag-skill-testing">Testing</span>
-                        <span class="tag tag-skill-pm">Process optimisation</span>
-                    </div>
+                    <h3>ERP Consulting — AFAS Software</h3>
+                    <span class="acc-period">2015 – 2021</span>
                 </div>
                 <span class="acc-icon"></span>
             </button>
-
             <div class="acc-panel">
                 <div class="acc-panel-inner">
-                    <p class="project-date"><strong>Sep 2015 – Apr 2021</strong></p>
-
-                    <h4>What I do</h4>
-                    <p>
-                        Started in support and testing and grew into a consultant role, helping clients with finance,
-                        logistics, subscription and project management processes in AFAS. I configured and tested
-                        processes, documented technical workflows and trained users.
-                    </p>
-
-                    <h4>Impact</h4>
-                    <p>
-                        Learned how to connect business needs with system capabilities and how to improve processes
-                        instead of just implementing them as‑is — something that still shapes how I think today.
-                    </p>
+                    <p>From support and testing to consultant. Finance, logistics, and
+                    subscription processes. Configuration, documentation, and user training.</p>
                 </div>
             </div>
         </div>
@@ -715,7 +597,7 @@
             </div>
         </section>
 
-       <!-- ════════ COMMUNITY INVOLVEMENT ════════ -->
+      <!-- ════════ COMMUNITY INVOLVEMENT ════════ -->
 <section id="community">
     <div class="section-header reveal">
         <h2>Community Involvement</h2>
@@ -726,8 +608,7 @@
 
         <!-- Triple A Benelux -->
         <a href="https://www.tripleanederland.nl/" target="_blank" class="community-card">
-            <div class="community-year">2025</div>
-            <h4>Online Content Creator</h4>
+            <h4>🐕 Online Content Creator <span class="link-icon">↗︎</span></h4>
             <p class="community-org">Triple A Benelux</p>
             <p class="community-desc">
                 Writing adoption profiles, updating web content, and supporting communication to help rescued dogs find the right home.
@@ -736,8 +617,7 @@
 
         <!-- Maximo Nivel, Costa Rica -->
         <a href="https://maximonivel.com/volunteers/animal-care/" target="_blank" class="community-card">
-            <div class="community-year">2023</div>
-            <h4>Dog Rescue Volunteer</h4>
+            <h4>🐕 Dog Rescue Volunteer (2023) <span class="link-icon">↗︎</span></h4>
             <p class="community-org">Maximo Nivel · Costa Rica</p>
             <p class="community-desc">
                 Assisted with daily care tasks, socialisation, rehabilitation and outreach in an international rescue environment.
@@ -800,34 +680,6 @@
     </div>
 
     <script src="js/main.js"></script>
-
-    <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const filterButtons = document.querySelectorAll('.project-filters .filter-btn');
-    const projectItems  = document.querySelectorAll('#projects .accordion .acc-item');
-
-    function applyFilter(filter) {
-        projectItems.forEach(item => {
-            const groups = (item.dataset.groups || '').split(/\s+/);
-            if (filter === 'all' || groups.includes(filter)) {
-                item.style.display = '';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
-
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filter = btn.dataset.filter;
-            applyFilter(filter);
-        });
-    });
-});
-</script>
-
 
 </body>
 </html>
