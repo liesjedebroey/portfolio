@@ -61,7 +61,7 @@ header {
 }
 nav {
     display: flex; align-items: center; justify-content: space-between;
-    max-width: 1100px; margin: 0 auto; padding: 0.8rem 2rem;
+    max-width: 1400px; margin: 0 auto; padding: 0.8rem 2rem;
 }
 .nav-logo {
     font-family: var(--font-display); font-size: 1.2rem; font-weight: 600;
@@ -106,7 +106,7 @@ nav {
    ============================== */
 .hero {
     padding: 7rem 2rem 3rem;
-    max-width: 1100px; margin: 0 auto;
+    max-width: 1400px; margin: 0 auto;
 }
 .hero-top {
     display: grid; grid-template-columns: auto 1fr;
@@ -180,11 +180,30 @@ nav {
     box-shadow: var(--card-shadow-hover);
     transform: translateY(-2px);
 }
-.strength-icon { font-size: 1.2rem; display: block; margin-bottom: 0.4rem; }
-.strength-card h4 {
-    font-family: var(--font-display); font-size: 0.85rem;
-    font-weight: 500; margin-bottom: 0.15rem; color: var(--navy);
+
+/* Icon + title on one line in strengths */
+.strength-header-row {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;         /* ruimte tussen emoji en titel */
+    margin-bottom: 0.25rem;
 }
+
+/* override kleine zaken */
+.strength-icon {
+    font-size: 1.1rem;
+    display: inline-flex; /* geen block meer, zodat het past in de row */
+    margin-bottom: 0;     /* want de row bepaalt nu spacing */
+}
+
+.strength-card h4 {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0;            /* header-row krijgt de bottom-margin */
+    color: var(--navy);
+}
+
 .strength-card p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.55; }
 
 /* Languages */
@@ -211,7 +230,7 @@ nav {
 /* ==============================
    Shared sections
    ============================== */
-section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+section { padding: 4rem 2rem; max-width: 1400px; margin: 0 auto; }
 .section-header { margin-bottom: 2rem; }
 .section-header h2 {
     font-family: var(--font-display);
@@ -336,9 +355,96 @@ section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
 .tag-design { color: var(--pink); background: var(--pink-soft); }
 .tag-tools { color: var(--gold); background: var(--gold-soft); }
 
+/* Project filters */
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.filter-btn {
+    padding: 0.25rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-hover);
+    background: #fff;
+    font-size: 0.78rem;
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+/* Project tags under title */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.25rem;
+}
+
+/* Skill-based tag colors (grouped) */
+.tag-skill-testing {
+    color: var(--green);
+    background: var(--green-soft);
+}
+.tag-skill-pm {
+    color: var(--purple);
+    background: var(--purple-soft);
+}
+.tag-skill-backend {
+    color: var(--blue);
+    background: var(--blue-soft);
+}
+.tag-skill-frontend {
+    color: var(--pink);
+    background: var(--pink-soft);
+}
+.tag-skill-db {
+    color: var(--gold);
+    background: var(--gold-soft);
+}
+.tag-skill-tools {
+    color: var(--text-muted);
+    background: rgba(0,0,0,0.03);
+}
+.tag-skill-modelling {
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+
+/* Date inside panels */
+.project-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+}
+.project-date strong {
+    font-weight: 500;
+}
+
 /* ==============================
    HORIZONTAL TIMELINE
    ============================== */
+
+.timeline-hint {
+    color: var(--accent);                /* ORANJE */
+    font-size: 0.9rem;                   /* zelfde als section-sub */
+    font-family: var(--font-body);       
+    font-weight: 400;                    /* iets duidelijker dan 300 */
+    margin-top: 0.2rem;
+}
+
 .htl {
     overflow-x: auto;
     padding-bottom: 1rem;
@@ -454,6 +560,41 @@ section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
     transform: translateY(-1px);
 }
 .cert-btn svg { stroke: currentColor; }
+
+/* ==============================
+   COMMUNITY INVOLVEMENT
+   ============================== */
+.community-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem;
+}
+.community-card {
+    display: block; text-decoration: none; color: var(--text);
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.2rem 1.4rem;
+    transition: all 0.25s;
+}
+.community-card:hover {
+    border-color: var(--accent); transform: translateY(-2px);
+    box-shadow: var(--card-shadow-hover);
+}
+.community-year {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 0.75rem; color: var(--accent); margin-bottom: 0.3rem;
+}
+.community-card h4 {
+    font-family: var(--font-display); font-size: 0.9rem;
+    font-weight: 500; color: var(--navy); margin-bottom: 0.1rem;
+}
+.community-org {
+    font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.5rem;
+}
+.community-desc {
+    font-size: 0.82rem; color: var(--text-mid); line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .community-grid { grid-template-columns: 1fr; }
+}
 
 /* ==============================
    CONTACT
