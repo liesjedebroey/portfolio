@@ -599,20 +599,21 @@ section { padding: 4rem 2rem; max-width: 1400px; margin: 0 auto; }
     gap: 0.35rem;
 }
 
+
 .link-icon {
-    font-size: 0.85rem;
-    opacity: 0.45;
-    transition: opacity 0.25s;
     display: inline-flex;
     align-items: center;
-    margin-left: 0.3rem;
+    margin-left: 0.35rem;
+    opacity: 0.55;
     transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .community-card:hover .link-icon {
-    opacity: 0.9;
+    opacity: 1;
     transform: translateY(-1px);
 }
+
+
 
 .community-org {
     font-size: 0.8rem;
