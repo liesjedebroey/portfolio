@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const panel = item.querySelector('.acc-panel');
             const isOpen = item.classList.contains('open');
 
-            // Close all open
             document.querySelectorAll('.acc-item.open').forEach(openItem => {
                 if (openItem !== item) {
                     openItem.classList.remove('open');
@@ -47,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Toggle
             if (isOpen) {
                 item.classList.remove('open');
                 panel.style.maxHeight = '0px';
@@ -69,16 +67,31 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             const wasActive = item.classList.contains('active');
 
-            // Remove all active states
             tlItems.forEach(i => i.classList.remove('active'));
             tlInfos.forEach(i => i.classList.remove('active'));
 
-            // Toggle (if was active, just close)
             if (!wasActive) {
                 item.classList.add('active');
                 const infoEl = document.getElementById(infoId);
                 if (infoEl) infoEl.classList.add('active');
             }
+        });
+    });
+
+    // ─── SKILLS — filter pills ───────
+    document.querySelectorAll('.sf-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.sf-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+            document.querySelectorAll('.sg-pill').forEach(pill => {
+                if (filter === 'all' || pill.dataset.cat === filter) {
+                    pill.classList.remove('sg-hidden');
+                } else {
+                    pill.classList.add('sg-hidden');
+                }
+            });
         });
     });
 
@@ -138,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (exportBtn) {
         exportBtn.addEventListener('click', e => {
             e.preventDefault();
-            const url = 'assets/CV_Annelies_Debroey.pdf';
+            const url = 'assets/cv/cv-annelies-debroey-2026.pdf';
             const a = document.createElement('a');
             a.href = url; a.download = 'CV_Annelies_Debroey.pdf';
             fetch(url, { method: 'HEAD' })
