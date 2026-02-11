@@ -160,4 +160,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ─── LANGUAGE PILLS — click to show info ───
+document.querySelectorAll('.lang-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+        const langId = 'lang-' + pill.dataset.lang;
+        const wasActive = pill.classList.contains('active');
+
+        document.querySelectorAll('.lang-pill').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.lang-info').forEach(i => i.classList.remove('active'));
+
+        if (!wasActive) {
+            pill.classList.add('active');
+            const infoEl = document.getElementById(langId);
+            if (infoEl) infoEl.classList.add('active');
+        }
+    });
+});
+
+// Close language info when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.lang-pill') && !e.target.closest('.lang-info-area')) {
+        document.querySelectorAll('.lang-pill').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.lang-info').forEach(i => i.classList.remove('active'));
+    }
+});
+
+// Auto-open FOD info on page load
+const defaultItem = document.querySelector('.htl-item[data-info="fod"]');
+const defaultInfo = document.getElementById('info-fod');
+if (defaultItem && defaultInfo) {
+    defaultItem.classList.add('active');
+    defaultInfo.classList.add('active');
+}
+
 });
