@@ -12,17 +12,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ─── Active nav on scroll ────────
-    const sections = document.querySelectorAll('section');
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(s => {
-            if (window.scrollY >= s.offsetTop - 150) current = s.id;
-        });
-        document.querySelectorAll('.nav-links a').forEach(a => {
-            a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-        });
-    }, { passive: true });
+// ─── Active nav on scroll ────────
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+    let current = sections[0].id;
+    const viewportBottom = window.scrollY + window.innerHeight;
+    const pageBottom = document.body.offsetHeight;
+
+    // At very bottom → last section (Contact)
+    if (viewportBottom >= pageBottom - 10) {
+        current = sections[sections.length - 1].id;
+    } else {
+        // Highlight whichever section is at 40% of viewport
+        const checkPoint = window.scrollY + window.innerHeight * 0.4;
+        for (let i = sections.length - 1; i >= 0; i--) {
+            if (checkPoint >= sections[i].offsetTop) {
+                current = sections[i].id;
+                break;
+            }
+        }
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+}, { passive: true });
 
     // ─── Reveal on scroll ────────────
     const observer = new IntersectionObserver(entries => {
